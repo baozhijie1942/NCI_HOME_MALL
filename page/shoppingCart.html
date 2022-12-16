@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="nci,home,ShoppingCart,sofa, sofas, chair, chairs, stable, tables, desk, desks, stores">
+    <meta name="robots" content="noindex, nofollow">
+    <title>ShoppingCart</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <style type="text/css">
+
+    </style>
+    <script>
+
+            function f() {
+                alert("Sorry, your balance is insufficient ");
+
+            }
+
+            var countMoneyBtn=document.getElementById("countMoneyBtn");
+            countMoneyBtn.onclick=f1;
+            function f1() {
+                alert("Whether you want to delete this item");
+
+            }
+
+            var remove=document.getElementsByClassName("remove");
+            remove.onclick=f1;
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row user-head-1">
+            <div class="navbar-left col-md-3 text-center" style="color:white;" id="login-status"><img src="../images/user/10.jpg" alt="" width="40px" class="img-circle">:　<span>charles</span></div>
+            <div class="navbar-left col-md-3 text-center" style="color:white;" ><span>Balance of account :<b style="color: red"> &#8364 29.0</b> </span>   </div>
+            <div class="col-md-6 navbar-right text-right">
+                <a href="shoppingCart.html" class="btn btn-warning" target="showFrame"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+                <a href="myAccount.html" class="btn btn-success" target="showFrame"><span class="glyphicon glyphicon-user"></span>My Account</a>
+                <a href="../index.html" target="showFrame" class="btn btn-danger"><span class="glyphicon glyphicon-home"></span> Home</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 30px">
+     <h1>Shopping Bag</h1>
+        <div class="row" style="margin-top: 20px">
+            <table class="col-md-12  table-hover text-center" >
+                <tr style="line-height:50px;background: lightgray;color: #ff7802;font-size: 20px;font-weight: bold" class="success">
+
+                    <td>Goods </td>
+                    <td>Goods price</td>
+                    <td>number</td>
+                    <td>Delete Goods</td>
+                </tr>
+                <tbody id="show-tab">
+                    <tr>
+
+                        <td> <div>
+                            <img src="../images/goods/12.jpg" width="100px" >
+                            <p style="color: gray">Dining Tables</p>
+
+                        </div></td>
+                        <td>&#8364<span class="price">399.0</span></td>
+                        <td><input type="number" value="1" min="1" max="999"></td>
+
+                        <td><button type="button" class="del-btn btn btn-danger" class="remove" onclick="f1()"><span class="glyphicon glyphicon-remove"></span>Remove</button></td>
+                    </tr>
+                    <tr>
+
+                        <td> <div>
+                            <img src="../images/goods/11.jpg" width="100px" >
+                            <p style="color: gray">Linara Armchair</p>
+
+                        </div></td>
+                        <td>&#8364<span class="price">699.0</span></td>
+                        <td><input type="number" value="1" min="1" max="999"></td>
+
+                        <td><button type="button" class="del-btn btn btn-danger" class="remove" onclick="f1()"><span class="glyphicon glyphicon-remove"></span>Remove</button></td>
+                    </tr>
+                    <tr>
+
+                        <td> <div>
+                            <img src="../images/goods/09.jpg" width="100px" >
+                            <p style="color: gray">Albion Dining Chair with Stitching</p>
+
+                        </div></td>
+                        <td>&#8364<span class="price">299.0</span></td>
+                        <td><input type="number" value="1" min="1" max="999"></td>
+
+                        <td><button type="button" class="del-btn btn btn-danger"class="remove" onclick="f1()"><span class="glyphicon glyphicon-remove"></span>Remove</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="row" style="line-height: 50px;background: lightgray">
+            <div class="col-md-12 table-bordered table-hover text-center">
+                <button type="button" class="btn btn-danger" id="countMoneyBtn" onclick="f()">Pay Now</button>
+            </div>
+
+        </div>
+        <h3 style="line-height: 60px">View recently</h3>
+        <div class="row">
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/08.jpg" height="150px" >
+                <p style="color: gray">Fallin Dining Chair</p>
+                <p style="color: orangered">price:&#8364 449.0</p>
+            </div>
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/09.jpg" height="150px" >
+                <p style="color: gray">Albion Dining Chair with Stitching</p>
+                <p style="color: orangered">price:&#8364 299.0 </p>
+            </div>
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/11.jpg" height="150px" >
+                <p style="color: gray">Linara Armchair</p>
+                <p style="color: orangered">price:&#8364 699.0</p>
+            </div>
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/12.jpg" height="150px" >
+                <p style="color: gray">Dining Tables</p>
+                <p style="color: orangered">price:&#8364 399.0</p>
+            </div>
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/11.jpg" height="150px" >
+                <p style="color: gray">Linara Armchair</p>
+                <p style="color: orangered">price:&#8364 699.0</p>
+            </div>
+            <div class="col-md-2 text-center" style="padding:10px">
+                <img src="../images/goods/09.jpg" height="150px" >
+                <p style="color: gray">Albion Dining Chair with Stitching</p>
+                <p style="color: orangered">price:&#8364 299.0 </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid ">
+        <div class="row user-head-1">
+
+            <div class="col-md-12 navbar-nav text-center">
+                <a href="contact.html"   ><span class="glyphicon glyphicon-log-out"></span> Contact US</a>
+                <p> &copy; Copyright 2020</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

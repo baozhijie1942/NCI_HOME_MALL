@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keyword" content="nci,home,chair, chairs, sofa, sofas, table, tables, desk, desks, stores, shop chair, chair store, chair, seat, bedroom, livingroom, furiture">
+    <title>register</title>
+    <link rel="stylesheet" href="../css/common.css">
+<style>
+
+</style>
+<script>
+
+    /*
+        分析：
+            1.给表单绑定onsubmit事件。监听器中判断每一个方法校验的结果。
+                如果都为true，则监听器方法返回true
+                如果有一个为false，则监听器方法返回false
+
+            2.定义一些方法分别校验各个表单项。
+            3.给各个表单项绑定onblur事件。
+
+
+
+     */
+        function validate(){
+            var username = document.reg_form.username;
+            var password = document.reg_form.password;
+            var email = document.reg_form.email;
+            var tel = document.reg_form.tel;
+            let address=document.reg_form.address;
+
+            if (username.value.length <= 0) {
+                alert("user Name is required");
+                username.focus();
+                return false;
+            }
+            if (password.value.length <= 0) {
+                alert("password is required");
+                password.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("E-mail is required");
+                email.focus();
+                return false;
+            }
+            if (tel.value.length <= 0) {
+                alert("mobile phone is required");
+                tel.focus();
+                return false;
+            }
+            if (address.value.length <= 0) {
+                alert("Address is required");
+                address.focus();
+                return false;
+            }
+
+        }
+
+
+</script>
+    <link rel="stylesheet" href="../css/a.css">
+</head>
+<body>
+<div class="register_bg">
+<div class="rg_layout">
+    <div class="rg_left">
+        <p>User Register</p>
+
+    </div>
+
+    <div class="rg_center">
+
+        <div class="rg_form">
+
+            <!--定义表单 form-->
+
+                <form method="get" action="myAccount.html" name="reg_form" onsubmit="return validate()">
+                <table>
+
+                    <tr>
+                        <td class="td_left"><label for="username">User Name</label></td>
+                        <td class="td_right">
+                            <input type="text" name="username" id="username" placeholder="please input user name(6-12 letters)">
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="password">Password</label></td>
+                        <td class="td_right">
+                            <input type="password" name="password" id="password" placeholder="please input password(6-12 letters)">
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="email">Email</label></td>
+                        <td class="td_right"><input type="email" name="email" id="email" placeholder="please input E-mail Adress"></td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td class="td_left"><label for="tel">Mobile</label></td>
+                        <td class="td_right"><input type="text" name="tel" id="tel" placeholder="please input mobile"></td>
+
+                    </tr>
+                    <tr>
+                        <td class="td_left"><label for="address">Address</label></td>
+                        <td class="td_right"><input type="text" name="address" id="address" placeholder="please input address"></td>
+
+
+
+                    </tr>
+
+
+                    <tr>
+                        <td class="td_left"><label>Gender</label></td>
+                        <td class="td_right" id="gender">
+                            <input type="radio" name="gender" value="male" checked>Male
+                            <input type="radio" name="gender" value="female"> Female
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td   class="td_sub"><input type="submit" class="btn_sub" value="Create Now"></td>
+                        <td   class="td_sub"><button type="reset" class="btn_sub" >reset</button></td>
+                    </tr>
+                </table>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="rg_right">
+        <p><a href="myAccount.html">Login Now</a></p><br>
+        <p><a href="../index.html">Back to Home</a></p>
+    </div>
+
+
+</div>
+
+</div>
+</body>
+</html>

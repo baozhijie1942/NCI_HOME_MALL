@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="../../script/jquery-3.5.1.js"></script>
+</head>
+<body>
+<div id="updateAddressModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modify Adress</h4>
+            </div>
+            <div class="media-body">
+                <form class="form-inline text-center" id="updateForm">
+
+                    <p>
+                        　Receiver:<input type="text" name="userName" class="form-control" placeholder="Enter Receiver name">
+                    </p>
+
+                    <p>
+                       Eircode:<input type="text" name="postalCode" class="form-control" placeholder="Enter Eircode">
+                    </p>
+
+
+                    <p>
+                       Address:
+                        <textarea class="form-control" cols="50" rows="5" placeholder="Enter Your detailed address"></textarea>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary" >Confirm the Modify</button>
+                        <button type="button" class="btn btn-danger"  data-dismiss="modal">Cancel</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container text-center">
+        <h1>Edit user information</h1>
+        <form class="form-inline">
+            <img src="../../images/user/10.jpg"  alt="" style="width: 150px" class="img-circle">
+            <p>
+                　username:<input type="text" placeholder="please enter user name" class="form-control" style="width:300px">
+            </p>
+            <p>
+                password:<input type="password" placeholder="please enter password" class="form-control" style="width:300px">
+            </p>
+            <p>
+
+            <p>
+
+                mobile:<input type="text" placeholder="please enter mobile" class="form-control" style="width:300px">
+            </p>
+
+            <p>
+                <a href="javascript:void(0)" class="btn btn-block" data-toggle="modal" data-target="#updateAddressModal"><span class="glyphicon glyphicon-edit"></span>
+                    Modify Adress</a>
+                <input type="submit" value="Determine the modification" class="btn btn-primary">
+                <input type="reset" value="cancel" class="btn btn-warning">
+            </p>
+        </form>
+    </div>
+    <script type="text/javascript" src="../../script/bootstrap.js"></script>
+</body>
+</html>

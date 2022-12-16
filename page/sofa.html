@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keyword" content="sofa, sofas, chair, chairs, stable, tables, desk, desks, stores">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sofa</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // JQUERY1 set Banner2----------------------------------------------
+        // Set Banner index img
+        $(".banner2-index").hover(function () {
+          $(this).css("display", "none");
+        });
+        // Use the for loop to set the position of each img when the mouse is moved out
+        function back() {
+          for (let i = 0; i < $(".banner2 .pic").length; i++) {
+            $(".banner2 .pic")
+              .eq(i)
+              .stop()
+              .animate({ left: 120 * i + "px" });
+          }
+        }
+        // Set the position of each image when the mouse is moved in
+        $(".banner2 .pic").hover(
+          function () {
+            let index = $(this).index();
+            $(this).css("index", 999);
+            for (let i = 0; i <= index; i++) {
+              $(".banner2 .pic")
+                .eq(i)
+                .stop()
+                .animate({ left: 25 * i + "px" });
+            }
+            for (let j = index + 1; j < $(".banner2 .pic").length; j++) {
+              $(".banner2 .pic")
+                .eq(j)
+                .stop()
+                .animate({ left: 25 * (j - 1) + 600 + "px" });
+            }
+          },
+          function () {
+            back();
+            $(".banner2-index").css("display", "block");
+          }
+        );
+        // JQUERY2 MAGNIFY IMG ------------------------------------
+        $("#small").mouseenter(function () {
+          $("#mark, #big").show();
+        });
+        $("#small")
+          .mouseleave(function () {
+            $("#mark,#big").hide();
+          })
+          .mousemove(function (event) {
+            let left = event.pageX - $(this).offset().left - 50;
+            let top = event.pageY - $(this).offset().top - 50;
+            if (left <= 0) {
+              left = 0;
+            }
+            if (left >= 320) {
+              left = 320;
+            }
+            if (top <= 0) {
+              top = 0;
+            }
+            if (top >= 150) {
+              top = 150;
+            }
+            // Change mark position
+            $("#mark").css({
+              left: left,
+              top: top,
+            });
+            // Change big img position
+            $("#big img").css({
+              left: -4 * left,
+              top: -4 * top,
+            });
+          });
+        // JQUERY3 CONTACT OUR PULL DOWN-----------------------------------------------
+        $(".contact-pull-down").hide();
+        $(".conour-wrapper").hover(
+          function () {
+            $(".contact-pull-down").slideDown(2000);
+          },
+          function () {
+            $(".contact-pull-down").slideUp(2000, function () {
+              $(".contact-pull-down").stop();
+              $(".contact-pull-down").hide();
+            });
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <div class="container-fluid">
+      <div class="row user-head-1">
+        <div class="col-md-8 navbar-right text-right">
+          <a href="shoppingCart.html" class="btn btn-warning" target="showFrame"
+            ><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a
+          >
+          <a href="myAccount.html" class="btn btn-success" target="showFrame"
+            ><span class="glyphicon glyphicon-user"></span>MyAccount</a
+          >
+          <a href="../index.html" target="showFrame" class="btn btn-danger"
+            ><span class="glyphicon glyphicon-home"></span> Home</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- BANNER SHOW-->
+    <div class="banner2-wrapper w clearfix">
+      <!-- Banner2-left -->
+      <div class="banner2-left">
+        <h2>LOOK OF THE BRIGHT SIDE</h2>
+        <p>
+          ART/ <br />
+          COLORFUL LIFE
+        </p>
+        <p>
+          EXPLORE/ <br />
+          NEW THINGS
+        </p>
+      </div>
+      <!-- Banner2-index -->
+      <div class="banner2-index">
+        <img src="../images/banner2-1.jpg" alt="banner index" />
+      </div>
+      <!-- Banner2 -->
+      <div class="banner2">
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+      </div>
+      <!-- Banner2-right -->
+      <div class="banner2-right">
+        <h2>
+          CONTENT <br />
+          CREATOR
+        </h2>
+      </div>
+    </div>
+    <!--PRODUCT  -->
+    <div class="product2-wrapper w clearfix">
+      <!-- Heading -->
+      <p class="heading">ATARAXIA</p>
+      <!-- Small img -->
+      <div id="small">
+        <img src="../images/focus.jpg" alt="magnify" />
+        <div id="mark"></div>
+      </div>
+      <!-- Big img -->
+      <div id="big">
+        <img src="../images/focus.jpg" alt="enlarge home" />
+      </div>
+      <!--Product2-right  -->
+      <div class="product2-right">
+        <div class="text1">
+          <h2>
+            KEEP SIMPLE <br />
+            ELEGANCE
+          </h2>
+          <p>The Best Furniture Manufacturer</p>
+        </div>
+        <div class="text2">
+          <h2>
+            INVESTING IN <br />
+            PROPERTY
+          </h2>
+          <p>Many Unique Furniture</p>
+        </div>
+        <div class="text3">
+          <h2>
+            ESSENTIALS CREAM <br />
+            DESIGN
+          </h2>
+          <p>Your Benefits</p>
+        </div>
+      </div>
+    </div>
+    <!-- SWITCH -->
+    <div class="switch-wrapper w clearfix">
+      <p class="heading">IRIDESCENT</p>
+      <div class="switch-img">
+        <ul>
+          <li>
+            <a href="sofa_details.html"
+              ><img src="../images/loop1.jpg" alt="sofa"
+            /></a>
+          </li>
+          <li>
+            <a href="sofa_details.html"
+              ><img src="../images/loop2.jpg" alt="sofa"
+            /></a>
+          </li>
+          <li>
+            <a href="sofa_details.html"
+              ><img src="../images/loop3.jpg" alt="sofa"
+            /></a>
+          </li>
+          <li>
+            <a href="sofa_details.html"
+              ><img src="../images/detail3.jpg" alt="sofa"
+            /></a>
+          </li>
+          <li>
+            <a href="sofa_details.html"
+              ><img src="../images/loop5.jpg" alt="sofa"
+            /></a>
+          </li>
+          <li class="big-img"></li>
+        </ul>
+      </div>
+    </div>
+    <!-- CONTACT OUR -->
+    <div class="conour-wrapper w clearfix">
+      <ul>
+        <li>
+          <img src="../images/light.png" alt="light icon" />
+          <p>CREATIVE & UNIQUE</p>
+          <span>CREATE FROM HERE</span>
+        </li>
+        <li>
+          <img src="../images/flight.png" alt="flight icon" />
+          <p>FREE & SHIPPING</p>
+          <span>ALL ORDER OVER 520</span>
+        </li>
+        <li>
+          <img src="../images/phone.png" alt="phone icon" />
+          <p>SUPPORT & CUSTOMER</p>
+          <span>SPORT 087232477</span>
+        </li>
+        <li>
+          <img src="../images/pay.png" alt="pay icon" />
+          <p>SECURE & PAYMENT</p>
+          <span>100% SECURE PAYMENT</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Contact our pull-down list -->
+    <div class="contact-pull-down w clearfix">
+      <h2>
+        HOT <br />
+        DEALS FOR YOU
+      </h2>
+      <h6>Online shopping for retail sales direct to customers</h6>
+      <ul>
+        <li>
+          <p>1.5% cashback</p>
+          <span
+            >Online shopping for retail <br />sales direct to <br />
+            customer</span
+          >
+        </li>
+        <li>
+          <p>30-day terms</p>
+          <span
+            >Online shopping for retail <br />sales direct to <br />
+            customer</span
+          >
+        </li>
+        <li>
+          <p>Save money</p>
+          <span
+            >Online shopping for retail <br />sales direct to <br />
+            customer</span
+          >
+        </li>
+      </ul>
+    </div>
+    <!--3D CARD  -->
+    <div class="card2-wrapper w clearfix">
+      <p class="heading">INEFFABLE</p>
+      <!-- 3D-box-wrapper -->
+      <div class="card-box-wrapper">
+        <!-- Card-box 1 -->
+        <div class="card-box">
+          <div class="card">
+            <div class="title">S</div>
+          </div>
+        </div>
+        <!-- Card-box 2 -->
+        <div class="card-box">
+          <div class="card">
+            <div class="title">O</div>
+          </div>
+        </div>
+        <!-- Card-box 3 -->
+        <div class="card-box">
+          <div class="card">
+            <div class="title">F</div>
+          </div>
+        </div>
+        <!-- Card-box 4 -->
+        <div class="card-box">
+          <div class="card">
+            <div class="title">A</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Foot -->
+    <div class="container-fluid">
+      <div class="row user-head-1">
+        <div class="col-md-12 navbar-nav text-center">
+          <a href="contact.html"
+            ><span class="glyphicon glyphicon-log-out"></span> Contact US</a
+          >
+          <p>&copy; Copyright 2022</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

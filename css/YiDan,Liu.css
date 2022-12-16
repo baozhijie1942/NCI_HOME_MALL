@@ -1,0 +1,139 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* ----------BODY */
+body {
+  background-color: #f9f2ec;
+}
+/* ----------NAV */
+.user-head-1 {
+  line-height: 60px;
+  background: #b2c1c4;
+}
+.nav-title-1 li a {
+  font-size: 12px;
+  color: gray;
+}
+.nav-title-1 li {
+  line-height: 40px;
+}
+/* ---------BUTTON */
+/* 1.danger button */
+.btn-danger {
+  border: 1px solid #95bbd2;
+  background: #95bbd2;
+}
+.btn-danger:hover {
+  border: 1px solid #aacce0;
+  background: #aacce0;
+}
+/*2.warning button*/
+.btn-warning {
+  background: #efc682;
+  border: 1px solid #efc682;
+}
+.btn-warning:hover {
+  background: #f5cf91;
+  border: 1px solid #f5cf91;
+}
+/*3.success button*/
+.btn-success {
+  background: #dfadbb;
+  border: 1px solid #dfadbb;
+}
+.btn-success:hover {
+  background: #edbfcc;
+  border: 1px solid #edbfcc;
+}
+/* 4.contact button */
+.row button {
+  background-color: #dc8873;
+  border: 1px solid #dc8873;
+  transition: 1s;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.4);
+}
+.row button:hover {
+  background-color: #e6ac9e;
+  border: 1px solid #e6ac9e;
+  transform: scale(1.1);
+}
+/* ----------MAP */
+#map {
+  width: 100%;
+  height: 300px;
+  margin-left: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.4);
+  transition: 2s;
+}
+#map:hover {
+  transform: scale(1.1);
+}
+/* ---------TEXT */
+.caption p {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  color: #7694a2;
+}
+
+.container-fluid a,
+.row button {
+  font-family: "Source Sans Pro", sans-serif;
+}
+h2 {
+  font-family: "Rubik Gemstones", cursive;
+  color: #5a69a1;
+}
+h2:hover,
+.caption p:hover {
+  color: #b2c1c4;
+}
+/* ---------CONTAINER */
+/* banner img */
+#nav-center {
+  background: url("../images/YiDan1.jpg");
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.4);
+  transition: 2s;
+  border-radius: 20px;
+}
+#nav-center:hover {
+  transform: translate(100px);
+}
+/* service show */
+.thumbnail {
+  border-radius: 20px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.4);
+}
+#nav-foot-1 {
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+  background: url("../images/YiDan4.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#nav-foot-2 {
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+  background: url("../images/YiDan2.jpg");
+}
+#nav-foot-3 {
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+  background: url("../images/YiDan3.jpg");
+  background-position: right;
+}
+#nav-foot-4 {
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+  background: url("../images/YiDan5.jpg");
+}
+.container{margin-top: 20px}
+
+.row{margin-top: 40px}

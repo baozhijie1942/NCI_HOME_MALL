@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+p,h2{
+    font-family: 'Unbounded', cursive;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+div.row.user-head-1{
+    background-color: rgb(83, 166, 166);
+}
+
+button{
+        border: 0;
+        border-radius: 10px;
+        background-color:rgb(83, 166, 166);
+        text-transform: uppercase;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 30px;
+        outline: none;
+        position: relative;
+        transition: border-radius 3s;
+        -webkit-transition: border-radius 3s;
+    }
+
+.col-md-12.text-center{
+    padding: 30px;
+}
+
+button:hover{   
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#regForm input,
+      #loginForm input {
+        width: 50%;
+      }
+      #regForm p,
+      #loginForm p {
+        line-height: 40px;
+      }
+      .nav-title-1 li a {
+        font-size: 12px;
+        color: gray;
+      }
+      .nav-title-1 li {
+        line-height: 40px;
+      }
+
+      #map {
+        width: 100%;
+        height: 300px;
+        margin-left: 15px;
+      }
+
+      .caption p {
+        text-align: center;
+      }
+      #nav-center {
+        background: url("../images/con-banner.jpg");
+        width: 100%;
+        height: 250px;
+        border-radius:30%;
+      }
+      #nav-foot-1 {
+        width: 100%;
+        height: 270px;
+        background: url("../images/staff-n.jpg");
+      }
+
+
+      #nav-foot-2 {
+        width: 100%;
+        height: 270px;
+        background: url("../images/findus-n.png");
+      }
+      #nav-foot-3 {
+        width: 100%;
+        height: 270px;
+        background: url("../images/parking-n.jpg");
+      }
+      #nav-foot-4 {
+        width: 100%;
+        height: 270px;
+        background: url("../images/goodinfo-n.jpg");
+      }
+
+      #nav-foot-1:hover, #nav-foot-2:hover, #nav-foot-3:hover,#nav-foot-4:hover{
+        transform: scale(1.1);
+      }
+
+    
+      .caption p:hover, .liam p:hover{
+        cursor: pointer;
+        color: red;
+      }
+    

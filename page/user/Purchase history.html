@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Purchase history</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="../../script/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="addCommentModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Comment</h4>
+            </div>
+            <div class="media-body">
+                <form class="form-inline text-center" id="addForm">
+                    <p>
+                        　User Name:<input type="text" name="userName" class="form-control" placeholder="please input UserName">
+                    </p>
+
+
+                    <p>
+                        comments:
+                        <textarea class="form-control" cols="50" rows="5" placeholder="Comment cannot exceed 30 words"></textarea>
+                    </p>
+                    <p>
+                        <button type="button" class="btn btn-primary" >Publish</button>
+                        <button type="button" class="btn btn-danger"  data-dismiss="modal">Cancel</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top: 30px">
+    <h1>Purchase history</h1>
+    <div class="row" style="margin-top: 20px">
+        <table class=" col-sm-12 table-hover text-center" >
+            <tr style="line-height:50px;background: lightgray;color: #ff7802;font-size: 20px;font-weight: bold" class="success">
+
+                <td>Goods </td>
+                <td>Goods price</td>
+                <td>number</td>
+                <td>Time</td>
+                <td>operate</td>
+            </tr>
+            <tbody id="show-tab">
+            <tr>
+
+                <td> <div>
+                    <img src="../../images/goods/12.jpg" width="100px" >
+                    <p style="color: gray">Dining Tables</p>
+                    </div>
+                </td>
+                <td>&#8364<span class="price">399.0</span></td>
+
+                <td><p style="color: gray">2</p></td>
+                <td><p style="color: gray">2022-12-15</p></td>
+                <td><a href="#" class="btn btn-success" data-toggle="modal" data-target="#addCommentModal">add comment</a></td>
+            </tr>
+            <tr>
+
+                <td> <div>
+                    <img src="../../images/goods/12.jpg" width="100px" >
+                    <p style="color: gray">Dining Tables</p>
+                </div>
+                </td>
+                <td>&#8364<span class="price">399.0</span></td>
+
+                <td><p style="color: gray">2</p></td>
+                <td><p style="color: gray">2022-12-15</p></td>
+                <td><a href="#" class="btn btn-success" data-toggle="modal" data-target="#addCommentModal">add comment</a></td>
+            </tr>
+
+
+        </table>
+        </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center" >
+
+            <h2 class="liam">Our Address</h2>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.2536923373!2d-6.3857865069186515!3d53.3244430382563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!5e0!3m2!1sen!2sie!4v1476181464720" style="border:0" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+     </div>
+    <script type="text/javascript" src="../../script/bootstrap.js"></script>
+     </body>
+</html>

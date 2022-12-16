@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keyword" content="sofa, sofas, chair, chairs, stable, tables, desk, desks, stores">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sofa_details</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <div class="container-fluid">
+      <div class="row user-head-1">
+        <div class="col-md-8 navbar-right text-right">
+          <a href="shoppingCar.html" class="btn btn-warning" target="showFrame"
+            ><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a
+          >
+          <a href="myAccount.html" class="btn btn-success" target="showFrame"
+            ><span class="glyphicon glyphicon-user"></span>MyAccount</a
+          >
+          <a href="../index.html" target="showFrame" class="btn btn-danger"
+            ><span class="glyphicon glyphicon-home"></span> Home</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- SOFA-DETAILS -->
+    <div class="sofaDetail-wrapper row" style="margin-top: 30px">
+      <!--sofa img  -->
+      <div class="col-md-5 sofa_img">
+        <img src="../images/banner2-5.jpg" alt="SOFA" />
+      </div>
+      <div class="col-md-6" style="margin-left: 30px">
+        <!-- heading -->
+        <div class="row">
+          <span style="font-size: 30px; margin-left: -600px">SOFA</span>
+        </div>
+        <!-- description -->
+        <div class="row col-md-12">
+          <span style="font-size: 12px; color: orangered"
+            >「 In the hot rush, you can enjoy up to 24 interest free periods,
+            starting from 10 euros per period; 100 Euros chair plus 20
+            Euros」</span
+          >
+          <span style="font-size: 12px; color: gray">
+            We never define a life, but we always live it. Advanced is not the
+            beauty on the surface, but deep inside the exquisite leisure in
+            life, need to be at your fingertips of nature and beauty.</span
+          >
+        </div>
+        <!-- price -->
+        <div class="row">
+          <span style="font-size: 35px">€<span>229</span></span>
+        </div>
+        <!-- choose color -->
+        <div class="row">
+          <span> CHOOSE COLOR：</span>
+          <br />
+          <div class="col-md-6 text-center">
+            <div class="row detail-div-1">
+              <select name="sofaColor" id="sofaColor">
+                <option value="black">BLACK</option>
+                <option value="white">WHITE</option>
+                <option value="brown">BROWN</option>
+                <option value="blue">BLUE</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- choose size -->
+        <div class="row" style="font-size: 15px">
+          <span>CHOOSE SIZE：</span>
+          <br />
+          <div class="col-md-6 text-center">
+            <div class="row detail-div-1">
+              <select name="sofaSize" id="sofaSize">
+                <option value="single">SINGLE</option>
+                <option value="double">DOUBLE</option>
+                <option value="king">KING</option>
+                <option value="super king">SUPER KING</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- choose quantity -->
+        <div style="margin-top: 30px">
+          <span> QUANTITY：</span>
+          <input type="number" min="1" max="10" value="1" />
+        </div>
+        <!-- button -->
+        <div style="margin-top: 30px" class="cartButton">
+          <button class="btn btn-primary" onclick="addCart()" id="addCart" >ADD CART</button>
+          <a href="shoppingCart.html" class="btn btn-primary">BUY NOW</a>
+        </div>
+      </div>
+    </div>
+    <!-- SOFA-COMMENTS -->
+    <div class="sofa-comments">
+      <!-- heading -->
+      <div class="row">
+        <div style="text-align: center">
+          <span style="font-size: 30px; margin-left: -100px"
+            >-----SOFA COMMENTS-----</span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-1 text-center">
+              <img src="../images/5.jpg" width=60 alt="user" />
+              <br />
+            </div>
+            <div class="col-md-10" style="border-bottom: 1px dashed gray">
+              <div style="line-height: 30px">
+                This sofa is very fashionable!
+              </div>
+              <div style="color: gray; font-size: 12px; line-height: 30px">
+                2022-12-5 05:20:00　　　SOFA COLOR:BLACK SIZE:KING
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1 text-center">
+              <img src="../images/6.jpg" width=60 alt="user" /><br />
+            </div>
+            <div class="col-md-10" style="border-bottom: 1px dashed gray">
+              <div style="line-height: 30px">This brown sofa is very nice!</div>
+              <div style="color: gray; font-size: 12px; line-height: 30px">
+                2022-12-8 09:20:00　　　SOFA COLOR:BROWN SIZE:SINGLE
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1 text-center">
+              <img src="../images/7.jpg" width=60 alt="user" /><br />
+            </div>
+            <div class="col-md-10" style="border-bottom: 1px dashed gray">
+              <div style="line-height: 30px">This sofa is too comfortable!</div>
+              <div style="color: gray; font-size: 12px; line-height: 30px">
+                2022-12-16 14:20:00　　　SOFA COLOR:WHITE SIZE:DOUBLE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SOFA-SHOW -->
+    <div class="sofa-show">
+      <!-- heading -->
+      <div class="row">
+        <div style="text-align: center">
+          <span style="font-size: 30px">-----SOFA SHOW-----</span>
+        </div>
+      </div>
+      <!-- sofa-img -->
+      <div class="row">
+        <div class="col-md-12">
+          <div
+            class="text-center show"
+            style="width: 20%; float: left; padding: 0px"
+          >
+            <a href="sofa.html"
+              ><img
+                src="../images/sofa1.jpg"
+                style="width: 150px; height: 100px"
+                alt="sofa"
+            /></a>
+            <p>SOFA1</p>
+            <p>€128.00</p>
+          </div>
+          <div
+            class="text-center show"
+            style="width: 20%; float: left; padding: 0px"
+          >
+            <a href="sofa.html"
+              ><img
+                src="../images/sofa2.jpg"
+                style="width: 150px; height: 100px"
+                alt="sofa"
+            /></a>
+            <p>SOFA2</p>
+            <p>€198.00</p>
+          </div>
+          <div
+            class="text-center show"
+            style="width: 20%; float: left; padding: 0px"
+          >
+            <a href="sofa.html"
+              ><img
+                src="../images/sofa3.jpg"
+                style="width: 150px; height: 100px"
+                alt="sofa"
+            /></a>
+            <p>SOFA3</p>
+            <p>€218.00</p>
+          </div>
+          <div
+            class="text-center show"
+            style="width: 20%; float: left; padding: 0px"
+          >
+            <a href="sofa.html"
+              ><img
+                src="../images/sofa4.jpg"
+                style="width: 150px; height: 100px"
+                alt="sofa"
+            /></a>
+            <p>SOFA4</p>
+            <p>€254.00</p>
+          </div>
+          <div
+            class="text-center show"
+            style="width: 20%; float: left; padding: 0px"
+          >
+            <a href="sofa.html"
+              ><img
+                src="../images/sofa5.jpg"
+                style="width: 150px; height: 100px"
+                alt="sofa"
+            /></a>
+            <p>SOFA5</p>
+            <p>€318.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Foot -->
+    <div class="container-fluid">
+      <div class="row user-head-1">
+        <div class="col-md-12 navbar-nav text-center">
+          <a href="contact.html"
+            ><span class="glyphicon glyphicon-log-out"></span> Contact US</a
+          >
+          <p>&copy; Copyright 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      //func:add to cart
+      function addCart(){
+        let add=document.getElementById("addCart").value;
+        if(add.length<=0){
+          alert("please choose the size and color")
+        }
+      }
+
+
+
+    </script>
+  </body>
+</html>
